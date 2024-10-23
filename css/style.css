@@ -1,8 +1,12 @@
 body{
-    background: lightgray;
-    color:whitesmoke;
-    text-align: center;
+    
+    color:black;
+    
 }
 h1{
+    text-align: center;
+}
+
+footer {
     text-align: center;
 }
