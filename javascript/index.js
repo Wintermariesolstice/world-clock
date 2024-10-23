@@ -1,26 +1,40 @@
 function updateTime(){
-//Poland
-let polandElement= document.querySelector("#poland");
-if (polandElement) {
-let polandDateElement = polandElement.querySelector(".date");
-let polandTimeElement = polandElement.querySelector(".time");
-let polandTime = moment().tz("Poland");
-polandDateElement.innerHTML = polandTime.format("MMMM Do YYYY");
-polandTimeElement.innerHTML = `${polandTime.format(
-  "h:mm:ss ")}<small>${polandTime.format("A")}</small>`;
-}
+  //Denver
+  let denverElement = document.querySelector("#denver");
+  if (denverElement) {
+    let denverDateElement = denverElement.querySelector(".date");
+    let denverTimeElement = denverElement.querySelector(".time");
+    let denverTime = moment().tz("America/Denver");
+    denverDateElement.innerHTML = denverTime.format("MMMM Do YYYY");
+    denverTimeElement.innerHTML = `${denverTime.format(
+      "h:mm:ss "
+    )}<small>${denverTime.format("A")}</small>`;
+  }
 
   //Paris
-let parisElement = document.querySelector("#paris");
-if (parisElement) {
-let parisDateElement = parisElement.querySelector(".date");
-let parisTimeElement = parisElement.querySelector(".time");
-let parisTime = moment().tz("Europe/Paris");
-parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-parisTimeElement.innerHTML = `${parisTime.format(
-  "h:mm:ss "
-)}<small>${parisTime.format("A")}</small>`;
-}}
+  let parisElement = document.querySelector("#paris");
+  if (parisElement) {
+    let parisDateElement = parisElement.querySelector(".date");
+    let parisTimeElement = parisElement.querySelector(".time");
+    let parisTime = moment().tz("Europe/Paris");
+    parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
+    parisTimeElement.innerHTML = `${parisTime.format(
+      "h:mm:ss "
+    )}<small>${parisTime.format("A")}</small>`;
+  }
+
+  //Jakarta
+  let jakartaElement = document.querySelector("#jakarta");
+  if (jakartaElement) {
+    let jakartaDateElement = jakartaElement.querySelector(".date");
+    let jakartaTimeElement = jakartaElement.querySelector(".time");
+    let jakartaTime = moment().tz("Asia/Jakarta");
+    jakartaDateElement.innerHTML = jakartaTime.format("MMMM Do YYYY");
+    jakartaTimeElement.innerHTML = `${jakartaTime.format(
+      "h:mm:ss "
+    )}<small>${jakartaTime.format("A")}</small>`;
+  }
+}
 
 function updateCity(event){
     let cityTimeZone = event.target.value;
@@ -40,6 +54,7 @@ function updateCity(event){
     </div>
     <div class="time">${cityTime.format("h:mm:ss ")}<small>${cityTime.format("A")}</small></div>
     </div>
+    <a href="index.html">Back to all cities</a>
 
     `;
 }
